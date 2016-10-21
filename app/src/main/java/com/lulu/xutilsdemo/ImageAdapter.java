@@ -1,6 +1,7 @@
 package com.lulu.xutilsdemo;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
+import org.xutils.common.Callback;
 import org.xutils.image.ImageOptions;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
@@ -73,7 +75,6 @@ public class ImageAdapter extends BaseAdapter {
             animation.setDuration(200 * position);
             builder.setAnimation(animation);
             ImageOptions options = builder.setFadeIn(true).build();
-
             x.image().bind(mImageView, url, options);
         }
     }
